@@ -1,3 +1,7 @@
+## Display of an interactive tic-tac-toe game using React. Check it out, and may the odds forever be in your favor!
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
