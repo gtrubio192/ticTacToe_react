@@ -23,6 +23,7 @@ class Board extends React.Component {
   handleClick(i) {
       const squares = this.state.squares.slice();
       if (calculateWinner(squares) || squares[i]) {
+        
         return;
       }
 
@@ -32,6 +33,10 @@ class Board extends React.Component {
           squares: squares,
           xIsNext: !this.state.xIsNext
         });
+  }
+
+  refreshGame() {
+      window.location.reload();
   }
 
   renderSquare(i) {
@@ -53,6 +58,9 @@ class Board extends React.Component {
     return (
       <div>
         <div className="status">{status}</div>
+        <div className="newGame">
+            <button onClick={() => this.refreshGame()}>New Game?</button>
+        </div>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
